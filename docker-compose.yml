@@ -41,8 +41,8 @@ services:
       - "80:80"
 volumes:
    vprodbdata: {}
-   vproappdbdata: {}
-   
+   vproappdata: {}
+
 
 
 
