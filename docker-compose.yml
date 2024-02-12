@@ -3,7 +3,7 @@ services:
   vprodb:
     build: 
       context: ./docker-files/db
-    image: nocnoc24/vpf_db
+    image: nocnoc24/vprodb
      Container_name:vprodb
     ports:
       - "3306:3306"
@@ -26,7 +26,7 @@ services:
   vproapp:
     build: 
       context: ./docker-files/app
-    image: nocnoc24/vpf_app
+    image: nocnoc24/vproapp
      Container_name:vproapp
     ports:
       - "8080:8080"
@@ -35,7 +35,7 @@ services:
   vproweb:
     build: 
       context: ./docker-files/web
-    image: nocnoc24/vpf_web
+    image: nocnoc24/vproweb
      Container_name:vproweb
     ports:
       - "80:80"
