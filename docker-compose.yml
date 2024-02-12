@@ -4,7 +4,7 @@ services:
     build: 
       context: ./docker-files/db
     image: nocnoc24/vprodb
-     Container_name:vprodb
+     Container_name:tagname
     ports:
       - "3306:3306"
     volumes:
@@ -27,7 +27,7 @@ services:
     build: 
       context: ./docker-files/app
     image: nocnoc24/vproapp
-     Container_name:vproapp
+     Container_name:tagname
     ports:
       - "8080:8080"
     volumes:
@@ -36,7 +36,7 @@ services:
     build: 
       context: ./docker-files/web
     image: nocnoc24/vproweb
-     Container_name:vproweb
+     Container_name:tagname
     ports:
       - "80:80"
 volumes:
