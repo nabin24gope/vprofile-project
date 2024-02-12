@@ -2,7 +2,7 @@ version: '3.8'
 services:
   vprodb:
     build: 
-      context: ./docker-files/db
+      context: ./Docker-files/db
     image: nocnoc24/vprodb
     container_name: vprodb
     ports:
@@ -25,7 +25,7 @@ services:
 
   vproapp:
     build: 
-      context: ./docker-files/app
+      context: ./Docker-files/app
     image: nocnoc24/vproapp
     container_name: vproapp
     ports:
@@ -34,7 +34,7 @@ services:
       - vproappdata:/usr/local/tomcat/webapps
   vproweb:
     build: 
-      context: ./docker-files/web
+      context: ./Docker-files/web
     image: nocnoc24/vproweb
     container_name: vproweb
     ports:
