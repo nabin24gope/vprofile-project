@@ -4,13 +4,13 @@ services:
     build: 
       context: ./docker-files/db
     image: nocnoc24/vprodb
-     Container_name:tagname
+    container_name: vprodb
     ports:
       - "3306:3306"
     volumes:
       - vprodbdata:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD =vprodpass
+      - MYSQL_ROOT_PASSWORD =vprodbpass
   vprocache01:
     image: "memcached"
     ports:
@@ -27,7 +27,7 @@ services:
     build: 
       context: ./docker-files/app
     image: nocnoc24/vproapp
-     Container_name:tagname
+    container_name: vproapp
     ports:
       - "8080:8080"
     volumes:
@@ -36,7 +36,7 @@ services:
     build: 
       context: ./docker-files/web
     image: nocnoc24/vproweb
-     Container_name:tagname
+    container_name: vproweb
     ports:
       - "80:80"
 volumes:
